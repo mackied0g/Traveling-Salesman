@@ -1,4 +1,4 @@
-class destinationsController < ApplicationController
+class DestinationsController < ApplicationController
 
     before_action :find_destination, only: [:show, :edit, :update, :destroy]
         

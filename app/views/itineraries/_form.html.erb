@@ -1,0 +1,26 @@
+<% if itinerary.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(itinerary.errors.count, "error") %> prohibited your trip from being saved!</h2>
+
+
+<!-- flash[:error] = @itinerary.errors.full_messages.to_sentence -->
+<!-- I guess I'm not too sure if we should use flash or do it this way.-->
+
+  <ul>
+  <% itinerary.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+<%= form_for(@itinerary) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+
+
+    <%= f.submit %>
+<% end %>

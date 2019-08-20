@@ -12,26 +12,26 @@ class FlightsController < ApplicationController
         end
         
         def new
-            @flight = Flight.new
+            # @flight = Flight.new
         end
         
         def create
-            @flight = Flight.create(flight_params)
-            redirect_to @flight 
+            # @flight = Flight.create(flight_params)
+            # redirect_to @flight 
         end
         
         def edit
         end
         
         def update
-            @flight.update(flight_params)
-            redirect_to @flight
+            # @flight.update(flight_params)
+            # redirect_to @flight
         end
         
         
         def destroy
-            @flight.destroy
-            redirect_to flights_path
+            # @flight.destroy
+            # redirect_to flights_path
         end
 
         

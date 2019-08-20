@@ -6,10 +6,10 @@ class LoginController < ApplicationController
   
     def create
       # check the information inside the form
-      @user = User.find_by(email: params[:email])
-      if @user && @user.authenticate(params[:password])
-        session["user_id"] = @user.id
-        flash[:message] = "Logging in #{@user.name}"
+      @salesman = Salesman.find_by(email: params[:email])
+      if @salesman && @salesman.authenticate(params[:password])
+        session["salesman_id"] = @salesman.id
+        flash[:message] = "Logging in #{@salesman.name}"
         redirect_to destinations_path
       else
         flash[:message] = "Incorrect email or password"

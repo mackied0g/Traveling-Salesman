@@ -1,7 +1,9 @@
 <h1> Welcome, Traveler!</h1>
 
-<p><%= link_to "Let's get you logged in.", salesmen_path %> </p>
+<p><%= link_to "Log in to view your itineraries.", login_path %> </p>
 <!-- We need to create another path for login, I think. Can someone confirm? -->
-<p><%= link_to 'View your upcoming trips.', itineraries_path %></p>
+<p><%= link_to 'Create an upcoming trip.', itineraries_path %></p>
+
 
 <td><%= link_to 'Delete your account.', @salesmen, method: :delete, data: { confirm: 'Are you sure you want to delete your account?' } %></td>
+

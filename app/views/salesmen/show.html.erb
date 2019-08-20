@@ -2,13 +2,15 @@
   <strong>First and last name:</strong>
   <%= @salesman.name %>
 </p>
-
-
 <p>
   <strong>Company:</strong>
   <%= @salesman.company %>
 </p>
-
 <%= link_to 'Edit', edit_salesman_path(@salesman) %>
-<br>
+<p></p>
 <%= link_to 'Back', salesmen_path %>
+<br>
+
+<h2> What would you like to do?</h2>
+<p><%= link_to 'Create a new itinerary.', new_itinerary_path %> </p>
+<p><%= link_to 'View your upcoming trips.', itineraries_path %></p>

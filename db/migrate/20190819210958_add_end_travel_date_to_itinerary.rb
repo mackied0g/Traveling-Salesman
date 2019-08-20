@@ -1,5 +1,5 @@
 class AddEndTravelDateToItinerary < ActiveRecord::Migration[5.2]
   def change
-    add_column :itineraries, :end-travel-date, :datetime
+    add_column :itineraries, :endtraveldate, :datetime
   end
 end

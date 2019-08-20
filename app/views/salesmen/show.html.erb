@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<h1> Your account: </h1><p>
   <strong>First and last name:</strong>
   <%= @salesman.name %>
 </p>
@@ -11,5 +9,6 @@
   <%= @salesman.company %>
 </p>
 
-<%= link_to 'Edit', edit_salesman_path(@salesman) %> |
+<%= link_to 'Edit', edit_salesman_path(@salesman) %>
+<br>
 <%= link_to 'Back', salesmen_path %>

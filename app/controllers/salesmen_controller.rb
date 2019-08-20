@@ -41,7 +41,7 @@ class SalesmenController < ApplicationController
         end
         
         def salesman_params
-            params.require(:salesman).permit(:name, :company)
+            params.require(:salesman).permit(:name, :email, :password :company)
         end
     
     end

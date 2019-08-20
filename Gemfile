@@ -9,7 +9,7 @@ gem 'rails', '~> 5.2.3'
 gem 'sqlite3'
 
 
-gem 'omniauth-facebook', '~> 3.0'
+######################gem 'omniauth-facebook', '~> 3.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

@@ -17,7 +17,13 @@ class ItinerariesController < ApplicationController
         
         def create
             @itinerary = Itinerary.create(itinerary_params)
-            redirect_to @itinerary 
+            if @itinerary.valid? 
+             redirect_to itinerary_path(@itinerary)
+            else 
+                flash[:errors] = @itenerary.errors.full_messages
+                redirect_to @itinerary 
+            end
+          
         end
         
         def edit

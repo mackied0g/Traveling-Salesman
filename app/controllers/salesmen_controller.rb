@@ -17,7 +17,13 @@ class SalesmenController < ApplicationController
         
         def create
             @salesman = Salesman.create(salesman_params)
-            redirect_to @salesman 
+            if @salesman.valid? 
+             redirect_to salesmen_path(@salesman) 
+            else 
+                flash[:errors] = @saleman.errors.full_messages
+                redirect_to new_salesman_path
+            end
+            
         end
         
         def edit
@@ -41,7 +47,7 @@ class SalesmenController < ApplicationController
         end
         
         def salesman_params
-            params.require(:salesman).permit(:name, :company)
+            params.require(:salesman).permit(:name, :company, :email, :password)
         end
     
     end

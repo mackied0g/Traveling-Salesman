@@ -13,13 +13,13 @@ class LoginController < ApplicationController
         redirect_to destinations_path
       else
         flash[:message] = "Incorrect email or password"
-        redirect_to "/welcome"
+        redirect_to "/login"
       end
     end
   
     def destroy
       logout
-      redirect_to destination_path
+      redirect_to login_path
     end
 
   

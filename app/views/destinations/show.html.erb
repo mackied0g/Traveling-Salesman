@@ -3,6 +3,6 @@
   <br>
   
   <h2> What would you like to do?</h2>
-  <p><%= link_to "Create a new itinerary for #{}.", new_itinerary_path %> </p>
+  <p><%= link_to "Create a new itinerary for #{@destination.name}.", new_itinerary_path %> </p>
   <p><%= link_to 'View your upcoming trips.', itineraries_path %></p>
-  <%= link_to 'Go back home.', salesmen_path %>
+  <%= link_to 'Go back home.', salesman_path %>

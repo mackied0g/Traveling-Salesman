@@ -12,7 +12,7 @@ class SalesmenController < ApplicationController
         end
         
         def new
-            @saleman = Salesman.new
+            @salesman = Salesman.new
         end
         
         def create

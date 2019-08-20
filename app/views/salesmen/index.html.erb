@@ -4,3 +4,6 @@
 <!-- We need to create another path for login, I think. Can someone confirm? -->
 <p><%= link_to 'Create an upcoming trip.', itineraries_path %></p>
 
+
+<td><%= link_to 'Delete your account.', @salesmen, method: :delete, data: { confirm: 'Are you sure you want to delete your account?' } %></td>
+

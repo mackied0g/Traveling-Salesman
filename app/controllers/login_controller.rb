@@ -21,10 +21,6 @@ class LoginController < ApplicationController
       logout
       redirect_to login_path
     end
-
-  
-  
-  
   
   
   

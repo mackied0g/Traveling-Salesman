@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :logins
+ 
   resources :flights
   resources :hotels
   resources :destinations

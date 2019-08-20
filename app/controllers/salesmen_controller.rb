@@ -4,7 +4,7 @@ class SalesmenController < ApplicationController
         
         
         def index
-            @salesmen = Salesman.all
+            redirect_to login_path
         end
         
         def show
@@ -12,19 +12,21 @@ class SalesmenController < ApplicationController
         end
         
         def new
-            @saleman = Salesman.new
+            @salesman = Salesman.new
         end
         
         def create
             @salesman = Salesman.create(salesman_params)
-            if @salesman.valid? 
-             redirect_to salesmen_path(@salesman) 
-            else 
-                flash[:errors] = @saleman.errors.full_messages
-                redirect_to new_salesman_path
+
+            if @salesman.valid?
+              session["salesman_id"] = @salesman.id
+              flash[:message] = "Created #{@salesman.name}"
+              redirect_to salesman_path(@salesman)
+            else
+              flash[:message] = "Invalid login credentials. Please try again."
+              redirect_to new_salesman_path
             end
-            
-        end
+          end
         
         def edit
         end
@@ -48,6 +50,7 @@ class SalesmenController < ApplicationController
         
         def salesman_params
             params.require(:salesman).permit(:name, :company, :email, :password)
+
         end
     
     end

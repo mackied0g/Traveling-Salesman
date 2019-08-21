@@ -1,33 +1,29 @@
 
 <ul>
 
-<h1>Lets Go!!</h1>
+<h1>Let's Go!!</h1>
+
+<!-- <p><a href="#">OPTION TO UPDATE PERSONAL INFO</a></p> -->
+<%= button_to "View your profile.", salesman_show_path %>
+
+
 
 <p>PROFILE HIGHLIGHTS</p>
 <%# <----  <%= OF ATTRIBUTES OR LAST TRIPS TAKEN%> 
-
-
-
-<p><a href="#">OPTION TO UPDATE PERSONAL INFO</a></p>
-
-<%# <----  THIS WOULD BE THE SALESMAN CONTROLLER EDIT ACTION  ------> %>
-
-
+<%= button_to "View your past trips.", new_itinerary_path %>
 
 
 <p><a href="#"><a href="#">LIST OF USERS UP COMING INITERARIES</a></p>
-
+<%= button_to "View your upcoming trips.", salesman_itinerary_path %>
 <%# <----  THIS WOULD BE THE SALESMAN CONTROLLER EDIT ACTION  ------> %>
 
 
-
-
-<p><a href="#">OPTION TO BOOK A NEW TRIP</a></p>
-
+<!-- <p><a href="#">OPTION TO BOOK A NEW TRIP</a></p> -->
+<%= link_to "Book a new trip.", new_itinerary_path %>
 <%# <----  ITINERARY.NEW  ------> %>
 
-<p><a href="#">LOG OUT</a></p>
-
+<!-- <p><a href="#">LOG OUT</a></p> -->
+<%= link_to "Logout", login_path %>
 
 </ul>
 

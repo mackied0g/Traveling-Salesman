@@ -45,7 +45,7 @@ class SalesmenController < ApplicationController
         private
         
         def find_salesman
-            @salesman = salesman.find(params[:id])
+            @salesman = Salesman.find(params[:id])
         end
         
         def salesman_params

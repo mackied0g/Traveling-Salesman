@@ -1,19 +1,11 @@
 <h1> Create a new account. </h1>
 
-<% if salesman.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(salesman.errors.count, "error") %> prohibited you from being saved!</h2>
-
-
-<!-- flash[:error] = @salesman.errors.full_messages.to_sentence -->
-<!-- I guess I'm not too sure if we should use flash or do it this way.-->
-
-  <ul>
-  <% salesman.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-  </ul>
-</div>
+<% if flash[:errors] %>  
+<% flash[:errors].each do |error| %>  
+<p>    
+<%= error %>  
+</p>  
+<% end %>
 <% end %>
 
 

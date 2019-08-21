@@ -22,3 +22,4 @@ class ApplicationController < ActionController::Base
     def logout
       session["salesman_id"] = nil
     end
+    end

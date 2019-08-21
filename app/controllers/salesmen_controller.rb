@@ -4,7 +4,7 @@ class SalesmenController < ApplicationController
         
         
         def index
-           # link_to "Profile", salesman_path(@salesman)
+           redirect_to splash_index_path()
         end
         
         def show
@@ -39,13 +39,13 @@ class SalesmenController < ApplicationController
         
         def destroy
             @salesman.destroy
-            redirect_to salesmen_path
+            redirect_to login_path
         end
         
         private
         
         def find_salesman
-            @salesman = salesman.find(params[:id])
+            @salesman = Salesman.find(params[:id])
         end
         
         def salesman_params

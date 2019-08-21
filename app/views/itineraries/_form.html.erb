@@ -1,3 +1,7 @@
+<h1>Let's book you a new trip.</h1>
+
+
+
 <% if itinerary.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(itinerary.errors.count, "error") %> prohibited your trip from being saved!</h2>
@@ -17,11 +21,18 @@
 
 <%= form_for(@itinerary) do |f| %>
 
-<%= collection_select(@itinerary, @destinations, :id, :name) %>
-<%= collection_select(@itinerary, @salesmen, :id, :name) %> 
+<%= f.label :destination_id %>
+<%= collection_select(:destination_id, @destinations, :id, :name) %>
+
+<%= f.label :salesman_id %>
+<%= collection_select(:salesman_id, @salesmen, :id, :name) %> 
 <!-- Salesman name should lock based on who's logged in. Check session? -->
-<%= collection_select(@itinerary, @flights, :id, :flight_number) %>
-<%= collection_select(@itinerary, @hotels, :id, :name) %>
+
+<%= f.label :flight_id %>
+<%= collection_select(:flight_id, @flights, :id, :flight_number) %>
+
+<%= f.label :hotel_id %>
+<%= collection_select(:hotel_id, @hotels, :id, :name) %>
 
 
 

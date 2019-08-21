@@ -17,8 +17,11 @@
 
 <%= form_for(@itinerary) do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<%= collection_select(@itinerary, @destinations, :id, :name) %>
+<%= collection_select(@itinerary, @salesmen, :id, :name) %> 
+<!-- Salesman name should lock based on who's logged in. Check session? -->
+<%= collection_select(@itinerary, @flights, :id, :flight_number) %>
+<%= collection_select(@itinerary, @hotels, :id, :name) %>
 
 
 

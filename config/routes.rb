@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :salesmen
   get '/login', to: 'login#new'
   post '/login', to: 'login#create'
-  delete '/logout', to: 'login#destory'
-  get '/go', to: 'splash#index'
+  delete '/logout', to: 'login#destroy'
+  get '/dashboard', to: 'splash#index'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

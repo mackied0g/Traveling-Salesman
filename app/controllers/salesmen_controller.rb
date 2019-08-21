@@ -4,7 +4,7 @@ class SalesmenController < ApplicationController
         
         
         def index
-            redirect_to login_path
+           # link_to "Profile", salesman_path(@salesman)
         end
         
         def show

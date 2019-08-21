@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
- 
+  root to: 'home#index'
+  get 'splash/index'
   get 'home/index'
   resources :flights
   resources :hotels
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   get '/login', to: 'login#new'
   post '/login', to: 'login#create'
   delete '/logout', to: 'login#destory'
-  root to: 'home#index'
+  get '/go', to: 'splash#index'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

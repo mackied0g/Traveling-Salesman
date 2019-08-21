@@ -7,5 +7,5 @@ class Salesman < ApplicationRecord
   
     validates :email, presence: true
     validates :password, presence: true
-    validates :password, length: { minimum: 8 }
+    validates :password, length: { minimum: 6 }
 end

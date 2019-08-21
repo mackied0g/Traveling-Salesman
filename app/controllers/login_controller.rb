@@ -10,7 +10,8 @@ class LoginController < ApplicationController
       if @salesman && @salesman.authenticate(params[:password])
         session["salesman_id"] = @salesman.id
         flash[:message] = "Logging in #{@salesman.name}"
-        redirect_to splash_path
+        redirect_to salesman_path(@salesman)
+
       else
         flash[:message] = "Incorrect email or password. Try creating a new account."
         redirect_to "/login"

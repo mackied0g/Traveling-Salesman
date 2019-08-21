@@ -4,7 +4,7 @@ class SalesmenController < ApplicationController
         
         
         def index
-           redirect_to splash_path()
+           redirect_to splash_index_path()
         end
         
         def show

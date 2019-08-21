@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
       @logged_in = !!@salesman_id
       if @logged_in
         @current_salesman = Salesman.find(@salesman_id)
-        @can_book_itinerary = @current_salesman.can_book_itinerary
+        # @can_book_itinerary = @current_salesman.can_book_itinerary
       end
   
     end

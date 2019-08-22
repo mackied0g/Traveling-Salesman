@@ -1,1 +1,18 @@
 <h1>Itinerary Show Page</h1>
+
+
+
+<% @itineraries.each do |itinerarydetails| %>
+      
+<%= itinerary.destination.name %>
+<%= itinerary.flight.starttraveltime %>
+<%= itinerary.flight.endtraveltime %>
+<%= itinerary.hotel.name %>
+<%= itinerary.hotel.reservationstart %>
+<%= itinerary.hotel.reservationend %>
+
+<%= link_to "Edit", edit_itinerary_path(itinerarydetails) %>
+
+<% end %>
+
+<%= link_to "Book a new trip", new_itinerary_path %>

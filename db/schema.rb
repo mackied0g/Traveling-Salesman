@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_224542) do
+ActiveRecord::Schema.define(version: 2019_08_22_152102) do
 
   create_table "destinations", force: :cascade do |t|
     t.string "location"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_224542) do
     t.integer "destination_id"
     t.datetime "flight_date"
     t.float "price"
-    t.string "class"
+    t.string "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "flight_number"

@@ -18,7 +18,7 @@ nyc = Destination.create(location: "Manhattan", about_info: "Ay, I'm walkin' her
 
 # tc_or_local, year, month = 1, day = 1, hour = 0, min = 0, sec = 0)
 
-delta123 = Flight.create(destination_id: destination.id, flight_date: (05/14/1998), price: 420.42, level: "business", flight_number: "Delta123")
+delta123 = Flight.create(destination_id: moon.id, flight_date: (05/14/1998), price: 420.42, level: "business", flight_number: "Delta123")
 sw123 = Flight.create(destination_id: aruba.id, flight_date: (03/12/2008), price: 890.42, level: "first", flight_number: "SouthWest123")
 can123 = Flight.create(destination_id: equador.id, flight_date: (2010-05-11), price: 40.42, level: "business", flight_number: "CanadaAir123")
 united123 = Flight.create(destination_id: nyc.id, flight_date: (1990-05-11), price: 310.42, level: "first", flight_number: "United123")
@@ -29,3 +29,5 @@ ramadaflushing = Hotel.create(destination_id: aruba.id, star_rating: 2, guest_ra
 daysinn = Hotel.create(destination_id: aruba.id, star_rating: 1, guest_rating: 3, is_available?: true, name: "Days Inn")
 mariottmarquis = Hotel.create(destination_id: equador.id, star_rating: 4, guest_rating: 10, is_available?: true, name: "The Mariott Marquis Times Square")
 
+
+kurt = Salesman.create()

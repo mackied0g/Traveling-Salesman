@@ -14,18 +14,17 @@
 
 <%= form_for(@itinerary) do |f| %>
 
-<%= f.label :destination_id %>
-<%= collection_select(:destination_id, @destinations, :id, :name) %>
+<%= f.label :destination %>
+<%= f.collection_select :destination_id, @destinations, :id, :name %>
 
-<%= f.label :salesman_id %>
-<%= collection_select(:salesman_id, @salesmen, :id, :name) %> 
+<%= f.hidden_field :current_salesman_id, value: @current_salesman.id %>
 <!-- Salesman name should lock based on who's logged in. Check session? -->
 
-<%= f.label :flight_id %>
-<%= collection_select(:flight_id, @flights, :id, :flight_number) %>
+<%= f.label :flight %>
+<%= f.collection_select :flight_id, @flights, :id, :flight_number  %>
 
-<%= f.label :hotel_id %>
-<%= collection_select(:hotel_id, @hotels, :id, :name) %>
+<%= f.label :hotel %>
+<%= f.collection_select :hotel_id, @hotels, :id, :name %>
 
 
     <%= f.submit %>

@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
-  get 'splash/index'
-  get 'home/index'
   resources :flights
   resources :hotels
   resources :destinations
   resources :itineraries
   resources :salesmen
+  root to: 'home#index'
+  get 'splash/index'
+  get 'home/index'
   get '/login', to: 'login#new'
   post '/login', to: 'login#create'
   delete '/logout', to: 'login#destroy'

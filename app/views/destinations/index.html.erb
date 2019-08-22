@@ -1,6 +1,12 @@
 <h1> Select a destinations by country:</h1>
 
-<p><%= link_to 'United States of America', destinations_path %></p>
-<p><%= link_to 'Greece', destinations_path %></p>
-<p><%= link_to 'England', destinations_path %></p>
-<p><%= link_to 'China', destinations_path %></p>
+
+
+  <table>
+  <% @destinations.each do |destination| %>
+    <tr>
+      <td><%= link_to destination.location, destination_path(destination) %></td>
+    
+  <% end %>
+</table>
+</ul>

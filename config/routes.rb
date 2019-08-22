@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :itineraries
   resources :salesmen
   root to: 'home#index'
-  get 'splash/index'
+  get 'splash/index' to: 'splash#index'
   get 'home/index'
   get '/login', to: 'login#new'
   post '/login', to: 'login#create'

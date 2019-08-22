@@ -13,6 +13,11 @@ class ItinerariesController < ApplicationController
         
         def new
             @itinerary = Itinerary.new
+            @destinations = Destination.all
+            @salesmen = Salesman.all
+            @flights = Flight.all
+            @hotels = Hotel.all
+    
         end
         
         def create

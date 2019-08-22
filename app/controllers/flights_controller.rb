@@ -12,12 +12,12 @@ class FlightsController < ApplicationController
         end
         
         def new
-            # @flight = Flight.new
+            @flight = Flight.new
         end
         
         def create
-            # @flight = Flight.create(flight_params)
-            # redirect_to @flight 
+            @flight = Flight.create(flight_params)
+            redirect_to @flight 
         end
         
         def edit
@@ -43,7 +43,7 @@ class FlightsController < ApplicationController
         end
         
         def flight_params
-            params.require(:flight).permit(:destination_id, :star_rating, :guest_rating, :is_available?)
+            params.require(:flight).permit(:destination_id, :flight_date, :price,:class,:flight_number)
         end
     
     end

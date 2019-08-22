@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Salesman.destroy_all
+# Flight.destroy_all
+# Hotel.destroy_all
+# Destination.destroy_all
+
 ron = Salesman.create(name: "Ron Howard", company: "P&G", email: "helloron@ronhoward.com", password: "1d&3G:7lR%?")
 kathy = Salesman.create(name: "Kathy Griffin", company: "AIG", email: "kathy@kathy.com", password: "123456")
 george = Salesman.create(name: "George Michael Bluth", company: "The Bluth Company", email: "mgb@bluth.com", password: "123456")
@@ -28,7 +33,3 @@ hiltonparis = Hotel.create(destination_id: aruba.id, star_rating: 4, guest_ratin
 ramadaflushing = Hotel.create(destination_id: aruba.id, star_rating: 2, guest_rating: 5, is_available?: false, name: "The Ramada Flushing")
 daysinn = Hotel.create(destination_id: aruba.id, star_rating: 1, guest_rating: 3, is_available?: true, name: "Days Inn")
 mariottmarquis = Hotel.create(destination_id: equador.id, star_rating: 4, guest_rating: 10, is_available?: true, name: "The Mariott Marquis Times Square")
-
-
-
-=======>>>>>>> master

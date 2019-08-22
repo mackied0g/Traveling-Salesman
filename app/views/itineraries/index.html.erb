@@ -1,2 +1,16 @@
-<h1>Itinerary index page</h1>
+<h1> Here's a list of your upcoming itineraries:</h1>
 
+
+<% @itineraries.each do |itinerary| %>
+      
+<%= itinerary.destination.name %>
+<%= itinerary.flight.starttraveltime %>
+<%= itinerary.flight.endtraveltime %>
+
+
+<%= link_to "Click this itinerary to view details", itinerary %>
+
+<% end %>
+
+
+<%= link_to "New itinerary", new_itinerary_path %>

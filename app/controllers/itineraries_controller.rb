@@ -25,11 +25,13 @@ class ItinerariesController < ApplicationController
             @itinerary = Itinerary.new(itinerary_params)
             @itinerary.salesman = @current_salesman
             if @itinerary.valid? 
-            redirect_to @current_salesman
+
+                @itinerary.save
+             redirect_to @current_salesman
             else 
-              
-            flash[:errors] = @itinerary.errors.full_messages
-            redirect_to new_itinerary_path
+                flash[:errors] = @itenerary.errors.full_messages
+                redirect_to new_itinerary_path
+
             end
           end
         

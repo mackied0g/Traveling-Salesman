@@ -30,5 +30,5 @@ daysinn = Hotel.create(destination_id: aruba.id, star_rating: 1, guest_rating: 3
 mariottmarquis = Hotel.create(destination_id: equador.id, star_rating: 4, guest_rating: 10, is_available?: true, name: "The Mariott Marquis Times Square")
 
 
-kurt = Salesman.create()
 
+=======>>>>>>> master

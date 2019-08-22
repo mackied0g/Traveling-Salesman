@@ -17,19 +17,21 @@ class ItinerariesController < ApplicationController
             @salesmen = Salesman.all
             @flights = Flight.all
             @hotels = Hotel.all
-    
         end
         
+ 
+
         def create
-            @itinerary = Itinerary.create(itinerary_params)
+            @itinerary = Itinerary.new(itinerary_params)
+            @itinerary.salesman = @current_salesman
             if @itinerary.valid? 
-             redirect_to itinerary_path(@itinerary)
+            redirect_to @current_salesman
             else 
-                flash[:errors] = @itenerary.errors.full_messages
-                redirect_to @itinerary 
+              
+            flash[:errors] = @itinerary.errors.full_messages
+            redirect_to new_itinerary_path
             end
-          
-        end
+          end
         
         def edit
         end

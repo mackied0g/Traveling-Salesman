@@ -15,7 +15,7 @@
 <%= form_for(@itinerary) do |f| %>
 
 <%= f.label :destination %>
-<%= f.collection_select :destination_id, @destinations, :id, :name %>
+<%= f.collection_select :destination_id, Destination.all, :id, :location %>
 
 <%= f.hidden_field :current_salesman_id, value: @current_salesman.id %>
 <!-- Salesman name should lock based on who's logged in. Check session? -->

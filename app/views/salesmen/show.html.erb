@@ -14,3 +14,17 @@
 <h2> What would you like to do?</h2>
 <p><%= link_to 'Create a new itinerary.', new_itinerary_path %> </p>
 <p><%= link_to 'View your upcoming trips.', itineraries_path %></p>
+
+
+
+<ul>
+<% @salesman.itineraries.each do |itinerary| %>
+<li>
+<%= link_to "#{itinerary.destination.location} ",destination_path(itinerary.destination_id) %>
+
+<% end %>
+
+
+</li>
+
+</ul>

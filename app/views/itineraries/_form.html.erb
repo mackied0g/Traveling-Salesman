@@ -2,30 +2,32 @@
 
 
 <% if flash[:errors] %>  
-<% flash[:errors].each do |error| %>  
-<p>    
-<%= error %>  
-</p>  
+    <% flash[:errors].each do |error| %>  
+        <p>    
+            <%= error %>  
+        </p>  
+    <% end %>
 <% end %>
-<% end %>
-
 
 
 
 <%= form_for(@itinerary) do |f| %>
 
-<%= f.label :destination %>
-<%= f.collection_select :destination_id, @destinations, :id, :location %>
+    <%= f.label :destination %>
+    <%= f.collection_select :destination_id, @destinations, :id, :location %>
 
-<!-- Salesman name should lock based on who's logged in. Check session? -->
+    <!-- Salesman name should lock based on who's logged in. Check session? -->
 
-<%= f.label :flight %>
-<%= f.collection_select :flight_id, @flights, :id, :flight_number  %>
+    <%= f.label :flight %>
+    <%= f.collection_select :flight_id, @flights, :id, :flight_number  %>
 
-<%= f.label :hotel %>
-<%= f.collection_select :hotel_id, @hotels, :id, :name %>
+    <%= f.label :hotel %>
+    <%= f.collection_select :hotel_id, @hotels, :id, :name %>
 
-
+        
+    <%= f.label :flight_date %>
+    <%= f.datetime_select "flight", "flight_date", ampm: true %>
+    
     <%= f.submit %>
 
 <% end %>

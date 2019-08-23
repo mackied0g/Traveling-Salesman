@@ -1,4 +1,5 @@
 class Salesman < ApplicationRecord
+
     has_secure_password
     has_many :itineraries
     has_many :destinations, through: :itineraries
@@ -8,4 +9,5 @@ class Salesman < ApplicationRecord
     validates :email, presence: true
     validates :password, presence: true
     validates :password, length: { minimum: 6 }
+
 end

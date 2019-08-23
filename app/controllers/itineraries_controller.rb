@@ -17,6 +17,7 @@ class ItinerariesController < ApplicationController
             @salesmen = Salesman.all
             @flights = Flight.all
             @hotels = Hotel.all
+            # byebug
         end
         
  

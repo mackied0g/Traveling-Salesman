@@ -4,21 +4,26 @@
 <% @itineraries.each do |itinerary| %>
 <ul>
 
- Location: <%= itinerary.destination.location %> 
+Destination: <%= itinerary.destination.location %> 
+<br> <br><br>
 Flight Date: <%= itinerary.flight.flight_date %>
+<br><br><br>
 Class: <%= itinerary.flight.level %>
+<br><br><br>
 Flight<%= itinerary.flight.flight_number %>
-
+<br><br><br>
 <%=itinerary.hotel.name%>
-<%=itinerary.hotel.star_rating%>
-<%=itinerary.hotel.guest_rating%>
-<%=itinerary.hotel.is_available?%>
+<%# <%=itinerary.hotel.star_rating%>
+<%# <%=itinerary.hotel.guest_rating%> %>
+<%# <%=itinerary.hotel.is_available?%> %> %>
 
 
 </ul>      
 
 
 <% end %>
+
+<%# <%= if %>
 
 <%= link_to "Click this itinerary to view details", @itinerary %>
 

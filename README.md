@@ -1,9 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Travel booking services for any and all salespeople!
 
-Things you may want to cover:
+Mod 2 Project. 
+
+
 
 * Ruby version
 

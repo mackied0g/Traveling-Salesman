@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_152102) do
+ActiveRecord::Schema.define(version: 2019_08_21_224542) do
 
   create_table "destinations", force: :cascade do |t|
     t.string "location"
     t.string "about_info"
+    t.float "average_daily_cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,7 +24,6 @@ ActiveRecord::Schema.define(version: 2019_08_22_152102) do
     t.integer "destination_id"
     t.datetime "flight_date"
     t.float "price"
-    t.string "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "flight_number"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_152102) do
     t.integer "star_rating"
     t.string "guest_rating"
     t.boolean "is_available?"
+    t.float "nightly_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_152102) do
     t.integer "salesman_id"
     t.integer "flight_id"
     t.integer "hotel_id"
+    t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "starttraveldate"
@@ -53,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_152102) do
   create_table "salesmen", force: :cascade do |t|
     t.string "name"
     t.string "company"
+    t.float "wallet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"

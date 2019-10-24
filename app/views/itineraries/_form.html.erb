@@ -20,13 +20,12 @@
 
     <%= f.label :flight %>
     <%= f.collection_select :flight_id, @flights, :id, :flight_number  %>
-
+<!-- 2 flights: chosen in flights, displayed in itinerary -->
     <%= f.label :hotel %>
     <%= f.collection_select :hotel_id, @hotels, :id, :name %>
 
         
-    <%= f.label :flight_date %>
-    <%= f.datetime_select "flight", "flight_date", ampm: true %>
+    
     
     <%= f.submit %>
 

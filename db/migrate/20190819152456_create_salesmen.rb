@@ -3,7 +3,8 @@ class CreateSalesmen < ActiveRecord::Migration[5.2]
     create_table :salesmen do |t|
       t.string :name
       t.string :company
-
+      t.float :wallet
+      
       t.timestamps
     end
   end

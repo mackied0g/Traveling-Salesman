@@ -5,6 +5,7 @@ class CreateHotels < ActiveRecord::Migration[5.2]
       t.integer :star_rating
       t.string :guest_rating
       t.boolean :is_available?
+      t.float :nightly_price
 
       t.timestamps
     end

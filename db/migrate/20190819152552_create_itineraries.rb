@@ -6,6 +6,9 @@ class CreateItineraries < ActiveRecord::Migration[5.2]
       t.integer :flight_id
       t.integer :hotel_id
 
+      t.float :cost
+
+      
       t.timestamps
     end
   end
